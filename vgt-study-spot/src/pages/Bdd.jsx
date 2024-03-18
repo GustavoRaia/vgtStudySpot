@@ -1,9 +1,9 @@
 import Sql from '../components/BDD/Sql/Sql.jsx';
 
-function App() {
+function Bdd() {
   return (
-    <Sql />
+      <Sql />
   );
 }
 
-export default App;
+export default Bdd;

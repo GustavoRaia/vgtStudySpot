@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Bdd from './pages/Bdd';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Bdd from './pages/Bdd';
+import Quiz from './pages/Quiz';
 
 const rotas = createBrowserRouter([
   
   {
     path: "/",
     element: <Bdd />
+  },
+  {
+    path: "/quiz",
+    element: <Quiz />
   }
 
 ])
