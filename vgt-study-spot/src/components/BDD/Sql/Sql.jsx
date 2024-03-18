@@ -50,20 +50,20 @@ const Sql = () => (
                             <p>SELECT DISTINCT cidade, estado FROM compradores;</p>
                         </div>
                         <div class="div-exemplos">
-                            <p class="comentario">-- SELECT com condiçoes de seleção (WHERE)</p>
+                            <p class="comentario">-- SELECT com condição de seleção (WHERE)</p>
                             <p class="comentario">-- Utilização de Subquery</p>
-                            <p>SELECT * FROM  <br/>
-	                           WHERE codigo_produto NOT IN (SELECT codigo_produto FROM itens_de_venda);</p>
+                            <p>SELECT * FROM  <br />
+                                WHERE codigo_produto NOT IN (SELECT codigo_produto FROM itens_de_venda);</p>
                         </div>
                         <div class="div-exemplos">
                             <p class="comentario">-- SELECT utilizando CASE</p>
-                            <p>SELECT cidade, estado, <br/>
-                                &nbsp;&nbsp;CASE <br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'RJ' THEN 'Rio de Janeiro' <br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'PA' THEN 'Pará' <br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'CE' THEN 'Ceará' <br/>
-                                &nbsp;&nbsp;&nbsp;&nbsp;ELSE 'Outro' <br/>
-                                &nbsp;&nbsp;END AS estado_texto <br/>
+                            <p>SELECT cidade, estado, <br />
+                                &nbsp;&nbsp;CASE <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'RJ' THEN 'Rio de Janeiro' <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'PA' THEN 'Pará' <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'CE' THEN 'Ceará' <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;ELSE 'Outro' <br />
+                                &nbsp;&nbsp;END AS estado_texto <br />
                                 FROM fornecedores;</p>
                         </div>
                     </details>
@@ -89,6 +89,40 @@ const Sql = () => (
                             <span>NOT NULL</span>
                         </div>
                     </details>
+                    <details>
+                        <summary>Exemplos</summary>
+                        <br />
+                        <div class="div-exemplos">
+                            <p class="comentario">-- Adicionando um comentário</p>
+                            <p>CREATE TABLE cliente ( <br />
+                                &nbsp;&nbsp;telefone VARCHAR(255) NOT NULL, <br />
+                                &nbsp;&nbsp;nome VARCHAR(255) NOT NULL, <br />
+                                &nbsp;&nbsp;endereco VARCHAR(255) NULL, <br />
+                                &nbsp;&nbsp;ponto_referencia VARCHAR(255) NULL, <br />
+                                &nbsp;&nbsp;nascimento DATE NULL, <br />
+                                &nbsp;&nbsp;CONSTRAINT pk_cliente PRIMARY KEY (telefone) <br />
+                                );
+                            </p>
+                        </div>
+                        <div class="div-exemplos">
+                            <p className='comentario'>-- Criação de Tabela</p>
+                            <p className='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
+                            <p className='comentario'>-- Utilização de funções definidas</p>
+                            <p>CREATE TABLE IF NOT EXISTS pedido ( <br />
+                                &nbsp;&nbsp;id INT NOT NULL, <br />
+                                &nbsp;&nbsp;telefone_cliente VARCHAR(255) NOT NULL, <br />
+                                &nbsp;&nbsp;id_entregador INT NOT NULL, <br />
+                                &nbsp;&nbsp;status VARCHAR(255) NULL, <br />
+                                &nbsp;&nbsp;taxa_entrega VARCHAR(255) NULL, <br />
+                                &nbsp;&nbsp;data DATETIME NOT NULL DEFAULT CURDATE(), <br />
+
+                                <p className='comentario'>&nbsp;&nbsp;-- Criação da Primary Key e das Foreign Keys</p>
+                                &nbsp;&nbsp;CONSTRAINT PK_Pedido PRIMARY KEY (id), <br />
+                                &nbsp;&nbsp;CONSTRAINT FK_Pedido_Entregador FOREIGN KEY (id_entregador) REFERENCES entregador(id) ON DELETE CASCADE, <br />
+                                &nbsp;&nbsp;CONSTRAINT FK_Pedido_Cliente FOREIGN KEY (telefone_cliente) REFERENCES cliente(telefone)ON DELETE CASCADE <br />
+                                );</p>
+                        </div>
+                    </details>
                 </details>
                 <details>
                     <summary>DML</summary>
@@ -110,7 +144,45 @@ const Sql = () => (
                         </div>
                     </details>
                     <details>
+                        <summary>Exemplos</summary>
+                        <br />
+                        <div class="div-exemplos">
+                            <p class="comentario">-- Adicionando um comentário</p>
+                        </div>
+                        <div class="div-exemplos">
+                            <p className='comentario'>-- Criação de Tabela</p>
+                            <p className='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
+                            <p className='comentario'>-- Utilização de funções definidas</p>
+                        </div>
+                    </details>
+                    <details>
                         <summary>Triggers</summary>
+                        <p>Triggers são funções no SQL disparados conforme uma ação DML é lançada (INSERT, UPDATE ou DELETE). Um trigger ,
+                            ou "gatilho" está sempre relacionado a uma tabela e aos comportamentos que ocorrem sobre ela.
+                        </p>
+                        <details>
+                            <summary>Exemplos</summary>
+                            <br />
+                            <div class="div-exemplos">
+                                <p class="comentario">-- Adicionando um comentário</p>
+                            </div>
+                            <div class="div-exemplos">
+                                <p className='comentario'>-- Criação de Trigger antes do INSERT de um novo dado</p>
+                                <p className='comentario'>-- Utilização de função de tempo</p>
+                                <p>
+                                    DELIMITER// <br/><br/>
+                                    CREATE TRIGGER TG_CLIENTES_IDADE_INSERT BEFORE INSERT ON CLIENTES <br/>
+                                    FOR EACH ROW <br/>
+                                    BEGIN <br/>
+                                    &nbsp;&nbsp;SET NEW.IDADE = timestampdiff(YEAR, NEW.DATA_NASCIMENTO, NOW()); <br/>
+                                    END//</p>
+                            </div>
+                            <div class="div-exemplos">
+                                <p className='comentario'>-- Criação de Tabela</p>
+                                <p className='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
+                                <p className='comentario'>-- Utilização de funções definidas</p>
+                            </div>
+                        </details>
                     </details>
                 </details>
                 <details>
