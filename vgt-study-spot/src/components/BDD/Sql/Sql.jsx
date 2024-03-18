@@ -1,6 +1,6 @@
 import './Sql.css';
 
-const Cadastro = () => (
+const Sql = () => (
     <div class="container">
 
         <details class="materia">
@@ -50,8 +50,10 @@ const Cadastro = () => (
                             <p>SELECT DISTINCT cidade, estado FROM compradores;</p>
                         </div>
                         <div class="div-exemplos">
-                            <p class="comentario">-- Adicionando um comentário</p>
-                            <p>SELECT * FROM banco_de_dados;</p>
+                            <p class="comentario">-- SELECT com condiçoes de seleção (WHERE)</p>
+                            <p class="comentario">-- Utilização de Subquery</p>
+                            <p>SELECT * FROM  <br/>
+	                           WHERE codigo_produto NOT IN (SELECT codigo_produto FROM itens_de_venda);</p>
                         </div>
                         <div class="div-exemplos">
                             <p class="comentario">-- SELECT utilizando CASE</p>
@@ -197,4 +199,4 @@ const Cadastro = () => (
     </div>
 );
 
-export default Cadastro;
+export default Sql;
