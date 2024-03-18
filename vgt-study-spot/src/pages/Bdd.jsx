@@ -1,8 +1,12 @@
 import Sql from '../components/BDD/Sql/Sql.jsx';
+import '../components/BDD/Sql/Sql.css';
 
 function Bdd() {
   return (
-      <Sql />
+    <body>
+      <Sql />      
+    </body>
+
   );
 }
 
