@@ -1,7 +1,7 @@
 import Sql from '../components/BDD/Sql/Sql.jsx';
 import '../components/BDD/Sql/Sql.css';
 
-function App() {
+function Bdd() {
   return (
     <body>
       <Sql />      
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default Bdd;
