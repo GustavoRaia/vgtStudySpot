@@ -13,7 +13,7 @@ body {
 }
 
 .materia {
-    width: clamp(60vw, 70%, 100vw);
+    width: clamp(60vw, 85%, 100vw);
     margin: auto;
     margin-top: 3vh;
     margin-bottom: 3vh;
@@ -21,6 +21,7 @@ body {
 
 details>details,
 details>h4,
+details>h5,
 details>div,
 details>p {
     margin-left: 2vw;
@@ -40,6 +41,25 @@ details {
 
 summary:hover {
     cursor: pointer;
+}
+
+/* .btnCopia {
+    width: 45px;
+    display: grid;
+    transform: translate(40%, 65px);
+    cursor: pointer;
+}
+
+.btnCopia:hover {
+    opacity: 0.6;
+} */
+
+ul {
+    padding-top: 2vh;
+}
+
+i {
+    font-weight: 700;
 }
 
 span {
@@ -72,4 +92,38 @@ span {
 
 .comentario {
     color: gray;
+}
+
+img {
+    width: 85%;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 1%;
+    user-select: none;
+    margin-left: 7%;
+}
+
+.obs {
+    background-color: wheat;
+    margin: 2% 10% 3% 10%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    details>details,
+    details>h4,
+    details>div,
+    details>p {
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    details {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
 }
