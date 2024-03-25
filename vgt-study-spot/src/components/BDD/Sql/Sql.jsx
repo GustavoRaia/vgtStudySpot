@@ -1,11 +1,151 @@
 import './Sql.css';
 
 const Sql = () => (
-    <div class="container">
+    <div className="container">
 
-        <details class="materia">
+        <details className="materia">
+            <summary>Modelagem de Dados</summary>
+
+            <p>Assunto que aborda o entendimento da modelagem de bancos de dados, assim como a sua aplicação em diferentes formas de modelagem e
+                a maneira que são representadas as características do mundo real em um recorte abstraído.
+            </p>
+
+            <details>
+                <summary>Principais Tópicos</summary>
+                <p>
+                    <ul>
+                        <li>MER e DER</li>
+                        <li>Entidades Fortes e Fracas</li>
+                        <li>Atributos</li>
+                        <li>Chaves (PK e FK)</li>
+                        <li>Relacionamento e Cardinalidade</li>
+                        <li>Entidades Associativas</li>
+                    </ul>
+                </p>
+            </details>
+
+
+            <p>
+                <h4>Modelagem Entidade Relacionamento - MER</h4>
+            </p>
+            <p>
+                O MER serve como uma forma de interpretar o mundo de forma reduzida. Através de objetos que são representados por Entidades,
+                e as interações entre elas, que são chamadas de relacionamento. Além disso essa abstração deve seguir as regras de negócio informadas
+                pelo cliente.
+            </p>
+
+            <p>
+                <h4>Diagrama Entidade Relacionamento - DER</h4>
+            </p>
+            <p>
+                O DER é uma maneira visual de representarmos as características identificadas e transforma-las para uma visualização mais paupável
+                para quem visualiza. O diagrama possui diferentes níveis de abstração, podendo ser conceitual, lógico ou físico.
+            </p>
+
+            <details>
+                <summary>Exemplos</summary>
+
+                <br />
+                <p><h5>Exemplo de Modelagem Conceitual</h5></p>
+                <p><img src="https://cdn1.gnarususercontent.com.br/1/1774033/8cfb443d-0e50-4895-b595-a9045de8a71a.png" alt="" /></p>
+                
+                <br />
+                <p><h5>Exemplo de Modelagem Lógica</h5></p>
+                <p><img src="https://cdn1.gnarususercontent.com.br/1/1225280/aa6c7c92-f40c-4717-b8c9-ab88c083a9b3.png" alt="" /></p>
+
+                <br />
+                <p><h5>Exemplo de Modelagem Física</h5></p>
+                <p><img className='imagem' src="https://cdn1.gnarususercontent.com.br/1/1800652/ed5300a8-be07-4d48-8723-5e3e19d2cd6a.png" alt="" /></p>
+            </details>
+
+            <p>
+                <h4>
+                    Entidades
+                </h4>
+            </p>
+            <p>
+                Entidades são abstrações de objetos do mundo real representados em modelagem. No modelo de Banco de Dados elas são representadas por
+                tabelas, e também podem ser representadas por objetos no modelo Orientado a Objetos. Cada entidade possui seus próprios atributos (uma entidade 
+                <i> Pessoa</i>, por exemplo, possui atributos como Nome, CPF, Telefone e Data de Nascimento) e também se relaciona com outras entidades. Em um 
+                sistema de livraria, por exemplo, podem existir diversas tabelas como <i>Livro</i>, <i>Autor</i>, <i>Editora</i>, <i>Cliente</i> entre outros.
+            </p>
+
+            <details>
+                <summary>Atributos</summary>
+
+                <p>
+                    Artibutos são as características que cada entidade carrega. Uma maneira de classifica-las com base em suas informações. Existem
+                    formas de representar e diferenciar atributos quando falamos de Modelagem de Dados.
+                </p>
+
+
+                <h5>Atributos Simples</h5>
+                <p>São os atributos mais comuns existentes. São indivisíveis e representam um valor único, como <i>CPF</i>, <i>Nome</i>, 
+                <i>Preço</i>, <i>Data de Fabricação</i>.</p>
+
+                <h5>Atributos Compostos</h5>
+                <p>Atributos que dependem de um conjunto de outros "sub atributos", ou que podem ser divididos em atributos menores. Como ocorre com <i>endereço</i> que é composto por <i>CEP</i>, <i>Rua</i>, <i>Número</i>, <i>Complemento</i></p>
+
+                <h5>Atributos Multivalorados</h5>
+                <p>
+                    São atributos que podem conter mais de um valores para serem preenchidos. Exemplos comuns são <i>telefone</i> ou <i>email</i>.
+                </p>
+
+                <h5>Atributos Derivados</h5>
+                <p>
+                    São aqueles que podem ser representados com base em outros atributos já definidos. Geralmente são atributos que possuem um tipo de cálculo ou manipulação para serem aplicados. Como um atributo <i>Idade</i> pode variar de um outro atributo já definido <i>"Data de Nascimento"</i>.
+                </p>
+
+                <details>
+                    <summary>Chaves</summary>
+
+                    <p>
+                        Chaves Primárias
+                    </p>
+
+                    <p>
+                        Chaves Estrangeiras
+                    </p>
+
+                </details>
+
+            </details>
+
+            <div className='obs'>
+                <p>Existem dois tipos de entidades na modelagem de dados. As <b>Entidades Fortes</b> e <b>Entidades Fracas</b>.</p>
+                <h5>Entidades Fortes</h5>
+                <p></p>
+                <h5>Entidades Fracas</h5>
+            </div>
+
+            <details>
+                <summary>Relacionamentos e Cardinalidade</summary>
+
+                <p>
+                    Os Relacionamentos são associacões entre entidades, que geralmente são caracterizados por verbos
+                </p>
+
+                <div className='obs'>
+                    <p>
+                        Os Relacionamentos Identificadores são aqueles que
+                    </p>
+                    <p>
+                        Os Relacionamentos Não Identificadores são aqueles que
+                    </p>
+                </div>
+
+                <details>
+                    <summary>Entidades Associativas</summary>
+                </details>
+
+            </details>
+
+        </details>
+
+        <details className="materia">
             <summary>SQL</summary>
             <p>Structured Query Language - Linguagem criada para manipular dados em bancos de dados relacionais.</p>
+
             <details>
                 <summary>Sublinguagens</summary>
                 <details>
@@ -18,7 +158,7 @@ const Sql = () => (
                     <details>
                         <summary>Comandos</summary>
                         <br />
-                        <div class="div-comandos">
+                        <div className="div-comandos">
                             <span>SELECT</span>
                             <span>FROM</span>
                             <span>WHERE</span>
@@ -34,29 +174,38 @@ const Sql = () => (
                             <span>OFFSET</span>
                             <span>HAVING</span>
                         </div>
+                        <ul>
+                            <li>SELECT - Seleciona uma coluna de uma tabela</li>
+                            <li>FROM</li>
+                            <li>WHERE</li>
+                            <li>LIMIT</li>
+                            <li>SELECT</li>
+                            <li>SELECT</li>
+                            <li>SELECT</li>
+                        </ul>
                     </details>
                     {/*  */}
                     <details>
                         <summary>Exemplos</summary>
                         <br />
-                        <div class="div-exemplos">
-                            <p class="comentario">-- SELECT básico</p>
-                            <p class="comentario">-- O "*" seleciona e retorna todas as colunas da tabela</p>
+                        <div className="div-exemplos">
+                            <p className="comentario">-- SELECT básico</p>
+                            <p className="comentario">-- O "*" seleciona e retorna todas as colunas da tabela</p>
                             <p>SELECT * FROM compradores;</p>
                         </div>
-                        <div class="div-exemplos">
-                            <p class="comentario">-- SELECT com DISTINCT</p>
-                            <p class="comentario">-- O DISTINCT seleciona a primeira ocorrência de um valor na tabela, sem repetição</p>
+                        <div className="div-exemplos">
+                            <p className="comentario">-- SELECT com DISTINCT</p>
+                            <p className="comentario">-- O DISTINCT seleciona a primeira ocorrência de um valor na tabela, sem repetição</p>
                             <p>SELECT DISTINCT cidade, estado FROM compradores;</p>
                         </div>
-                        <div class="div-exemplos">
-                            <p class="comentario">-- SELECT com condição de seleção (WHERE)</p>
-                            <p class="comentario">-- Utilização de Subquery</p>
+                        <div className="div-exemplos">
+                            <p className="comentario">-- SELECT com condição de seleção (WHERE)</p>
+                            <p className="comentario">-- Utilização de Subquery</p>
                             <p>SELECT * FROM  <br />
                                 WHERE codigo_produto NOT IN (SELECT codigo_produto FROM itens_de_venda);</p>
                         </div>
-                        <div class="div-exemplos">
-                            <p class="comentario">-- SELECT utilizando CASE</p>
+                        <div className="div-exemplos">
+                            <p className="comentario">-- SELECT utilizando CASE</p>
                             <p>SELECT cidade, estado, <br />
                                 &nbsp;&nbsp;CASE <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;WHEN estado LIKE 'RJ' THEN 'Rio de Janeiro' <br />
@@ -77,7 +226,7 @@ const Sql = () => (
                     <details>
                         <summary>Comandos e Atributos</summary>
                         <br />
-                        <div class="div-comandos">
+                        <div className="div-comandos">
                             <span>CREATE</span>
                             <span>ALTER</span>
                             <span>DROP</span>
@@ -92,8 +241,8 @@ const Sql = () => (
                     <details>
                         <summary>Exemplos</summary>
                         <br />
-                        <div class="div-exemplos">
-                            <p class="comentario">-- Adicionando um comentário</p>
+                        <div className="div-exemplos">
+                            <p className="comentario">-- Adicionando um comentário</p>
                             <p>CREATE TABLE cliente ( <br />
                                 &nbsp;&nbsp;telefone VARCHAR(255) NOT NULL, <br />
                                 &nbsp;&nbsp;nome VARCHAR(255) NOT NULL, <br />
@@ -104,10 +253,10 @@ const Sql = () => (
                                 );
                             </p>
                         </div>
-                        <div class="div-exemplos">
-                            <p className='comentario'>-- Criação de Tabela</p>
-                            <p className='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
-                            <p className='comentario'>-- Utilização de funções definidas</p>
+                        <div className="div-exemplos">
+                            <p classNameName='comentario'>-- Criação de Tabela</p>
+                            <p classNameName='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
+                            <p classNameName='comentario'>-- Utilização de funções definidas</p>
                             <p>CREATE TABLE IF NOT EXISTS pedido ( <br />
                                 &nbsp;&nbsp;id INT NOT NULL, <br />
                                 &nbsp;&nbsp;telefone_cliente VARCHAR(255) NOT NULL, <br />
@@ -116,7 +265,7 @@ const Sql = () => (
                                 &nbsp;&nbsp;taxa_entrega VARCHAR(255) NULL, <br />
                                 &nbsp;&nbsp;data DATETIME NOT NULL DEFAULT CURDATE(), <br />
 
-                                <p className='comentario'>&nbsp;&nbsp;-- Criação da Primary Key e das Foreign Keys</p>
+                                <p classNameName='comentario'>&nbsp;&nbsp;-- Criação da Primary Key e das Foreign Keys</p>
                                 &nbsp;&nbsp;CONSTRAINT PK_Pedido PRIMARY KEY (id), <br />
                                 &nbsp;&nbsp;CONSTRAINT FK_Pedido_Entregador FOREIGN KEY (id_entregador) REFERENCES entregador(id) ON DELETE CASCADE, <br />
                                 &nbsp;&nbsp;CONSTRAINT FK_Pedido_Cliente FOREIGN KEY (telefone_cliente) REFERENCES cliente(telefone)ON DELETE CASCADE <br />
@@ -134,7 +283,7 @@ const Sql = () => (
                     <details>
                         <summary>Comandos</summary>
                         <br />
-                        <div class="div-comandos">
+                        <div className="div-comandos">
                             <span>INSERT</span>
                             <span>UPDATE</span>
                             <span>DELETE</span>
@@ -146,41 +295,71 @@ const Sql = () => (
                     <details>
                         <summary>Exemplos</summary>
                         <br />
-                        <div class="div-exemplos">
-                            <p class="comentario">-- Adicionando um comentário</p>
+                        <div className="div-exemplos">
+                            <p className="comentario">-- Adicionando um comentário</p>
                         </div>
-                        <div class="div-exemplos">
-                            <p className='comentario'>-- Criação de Tabela</p>
-                            <p className='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
-                            <p className='comentario'>-- Utilização de funções definidas</p>
+                        <div className="div-exemplos">
+                            <p classNameName='comentario'>-- Criação de Tabela</p>
+                            <p classNameName='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
+                            <p classNameName='comentario'>-- Utilização de funções definidas</p>
                         </div>
                     </details>
                     <details>
                         <summary>Triggers</summary>
-                        <p>Triggers são funções no SQL disparados conforme uma ação DML é lançada (INSERT, UPDATE ou DELETE). Um trigger ,
+                        <p>Triggers são funções no SQL disparados automaticamente antes ou depois de uma ação DML ser lançada (INSERT, UPDATE ou DELETE). Um trigger ,
                             ou "gatilho" está sempre relacionado a uma tabela e aos comportamentos que ocorrem sobre ela.
                         </p>
                         <details>
                             <summary>Exemplos</summary>
                             <br />
-                            <div class="div-exemplos">
-                                <p class="comentario">-- Adicionando um comentário</p>
-                            </div>
-                            <div class="div-exemplos">
-                                <p className='comentario'>-- Criação de Trigger antes do INSERT de um novo dado</p>
-                                <p className='comentario'>-- Utilização de função de tempo</p>
+                            <div className="div-exemplos">
+                                <p classNameName='comentario'>-- Criação de Trigger antes do INSERT de um novo dado</p>
+                                <p classNameName='comentario'>-- Utilização de função de tempo</p>
                                 <p>
-                                    DELIMITER// <br/><br/>
-                                    CREATE TRIGGER TG_CLIENTES_IDADE_INSERT BEFORE INSERT ON CLIENTES <br/>
-                                    FOR EACH ROW <br/>
-                                    BEGIN <br/>
-                                    &nbsp;&nbsp;SET NEW.IDADE = timestampdiff(YEAR, NEW.DATA_NASCIMENTO, NOW()); <br/>
-                                    END//</p>
+                                    DELIMITER// <br /><br />
+                                    CREATE TRIGGER TG_CLIENTES_IDADE_INSERT BEFORE INSERT ON CLIENTES <br />
+                                    FOR EACH ROW <br />
+                                    BEGIN <br />
+                                    &nbsp;&nbsp;SET NEW.IDADE = timestampdiff(YEAR, NEW.DATA_NASCIMENTO, NOW()); <br />
+                                    END//
+                                </p>
                             </div>
-                            <div class="div-exemplos">
-                                <p className='comentario'>-- Criação de Tabela</p>
-                                <p className='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
-                                <p className='comentario'>-- Utilização de funções definidas</p>
+                            <div className="div-exemplos">
+                                <p classNameName='comentario'>-- Criação de Trigger após o insert de um dado no banco</p>
+                                <p classNameName='comentario'>-- Exclui o valor guardado e insere um novo recalculado</p>
+                                <p classNameName='comentario'>-- Ocorre após o insert de um valor na tabela de ITENS_NOTAS</p>
+                                <p>
+                                    DELIMITER// <br /><br />
+                                    CREATE TRIGGER TG_CALCULA_FATURAMENTO_INSERT AFTER INSERT ON ITENS_NOTAS <br /><br />
+                                    FOR EACH ROW <br />
+                                    BEGIN <br />
+                                    &nbsp;&nbsp;DELETE FROM TAB_FATURAMENTO; <br />
+                                    &nbsp;&nbsp;INSERT INTO TAB_FATURAMENTO <br />
+                                    &nbsp;&nbsp;SELECT A.DATA_VENDA, SUM(B.QUANTIDADE * B.PRECO) AS TOTAL_VENDA FROM NOTAS A <br />
+                                    &nbsp;&nbsp;INNER JOIN ITENS_NOTAS B <br />
+                                    &nbsp;&nbsp;ON A.NUMERO = B.NUMERO; <br /><br />
+                                    END//
+                                </p>
+                            </div>
+                            <div className="div-exemplos">
+                                <p className="comentario">-- PUTERRIER DA MALÁSIA</p>
+                                <p>
+                                    DELIMITER// <br /><br />
+                                    CREATE TRIGGER TG_CALCULA_FATURAMENTO_DELETE AFTER DELETE ON ITENS_NOTAS <br /><br />
+                                    FOR EACH ROW <br />
+                                    BEGIN <br />
+                                    &nbsp;&nbsp;DELETE FROM TAB_FATURAMENTO; <br />
+                                    &nbsp;&nbsp;INSERT INTO TAB_FATURAMENTO <br />
+                                    &nbsp;&nbsp;SELECT A.DATA_VENDA, <br />
+                                    &nbsp;&nbsp;SUM(B.QUANTIDADE * B.PRECO) AS TOTAL_VENDA <br />
+                                    &nbsp;&nbsp;FROM NOTAS A INNER JOIN ITENS_NOTAS B <br />
+                                    &nbsp;&nbsp;ON A.NUMERO = B.NUMERO <br />
+                                    &nbsp;&nbsp;GROUP BY A.DATA_VENDA; <br /><br />
+                                    END//
+                                </p>
+                            </div>
+                            <div className="div-exemplos">
+                                <p className="comentario">-- Adicionando um comentário</p>
                             </div>
                         </details>
                     </details>
@@ -196,7 +375,7 @@ const Sql = () => (
                     <details>
                         <summary>Comandos</summary>
                         <br />
-                        <div class="div-comandos">
+                        <div className="div-comandos">
                             <span>GRANT</span>
                             <span>REVOKE</span>
                             <span>DENY</span>
@@ -211,19 +390,22 @@ const Sql = () => (
 
             <details>
                 <summary>Procedures</summary>
+
                 <details>
                     <summary>Comandos</summary>
                     <br />
-                    <div class="div-comandos">
+                    <div className="div-comandos">
                         <span>SELECT</span>
                         <span>FROM</span>
                     </div>
+
                 </details>
+
                 <details>
                     <summary>Exemplos</summary>
                     <br />
-                    <div class="div-exemplos">
-                        <p class="comentario">-- Adicionando um comentário</p>
+                    <div className="div-exemplos">
+                        <p className="comentario">-- Adicionando um comentário</p>
                         <p>CREATE PROCEDURE <code>Limite_creditos()</code>
                             BEGIN <br />
                             DECLARE LIMITECREDITO FLOAT; <br />
@@ -246,12 +428,23 @@ const Sql = () => (
                             CLOSE c; <br />
                             END</p>
                     </div>
-                    <div class="div-exemplos">
+                    <div className="div-exemplos">
                         <p>SELECT * FROM banco_de_dados;</p>
                         <p>SELECT * FROM banco_de_dados;</p>
                         <p>SELECT * FROM banco_de_dados;</p>
                     </div>
+
                 </details>
+
+                <details>
+                    <summary>Cursor</summary>
+                    <br />
+                    <div className="div-exemplos">
+                        <p classNameName='comentario'>-- Ruyter Poubel</p>
+                    </div>
+
+                </details>
+
             </details>
 
             <details>
@@ -260,11 +453,8 @@ const Sql = () => (
 
         </details>
 
-        {/* <details class="materia">
-            <summary>Modelagem de Dados</summary>
-        </details>
-
-        <details class="materia">
+        {/* 
+        <details className="materia">
             <summary>Engenharia de Dados</summary>
         </details> */}
 
