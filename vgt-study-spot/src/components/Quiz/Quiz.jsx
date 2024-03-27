@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import questions from "./questions.json"
+import Nav from '../Nav/Nav';
 
 const EnglishVocabularyTraining = () => {
   let currentQuestionIndex = 0;
@@ -82,6 +83,7 @@ const EnglishVocabularyTraining = () => {
 
   return (
     <>
+      <Nav />
       <div class="text-center page">
         <h1 class="my-5 fw-semibold">English Vocabulary Training</h1>
 
