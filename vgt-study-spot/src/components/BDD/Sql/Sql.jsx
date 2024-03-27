@@ -2,7 +2,6 @@ import './Sql.css';
 
 const Sql = () => (
     <div className="container">
-
         <details className="materia">
             <summary>Modelagem de Dados</summary>
 
@@ -48,7 +47,7 @@ const Sql = () => (
                 <br />
                 <p><h5>Exemplo de Modelagem Conceitual</h5></p>
                 <p><img src="https://cdn1.gnarususercontent.com.br/1/1774033/8cfb443d-0e50-4895-b595-a9045de8a71a.png" alt="" /></p>
-                
+
                 <br />
                 <p><h5>Exemplo de Modelagem Lógica</h5></p>
                 <p><img src="https://cdn1.gnarususercontent.com.br/1/1225280/aa6c7c92-f40c-4717-b8c9-ab88c083a9b3.png" alt="" /></p>
@@ -65,8 +64,8 @@ const Sql = () => (
             </p>
             <p>
                 Entidades são abstrações de objetos do mundo real representados em modelagem. No modelo de Banco de Dados elas são representadas por
-                tabelas, e também podem ser representadas por objetos no modelo Orientado a Objetos. Cada entidade possui seus próprios atributos (uma entidade 
-                <i> Pessoa</i>, por exemplo, possui atributos como Nome, CPF, Telefone e Data de Nascimento) e também se relaciona com outras entidades. Em um 
+                tabelas, e também podem ser representadas por objetos no modelo Orientado a Objetos. Cada entidade possui seus próprios atributos (uma entidade
+                <i> Pessoa</i>, por exemplo, possui atributos como Nome, CPF, Telefone e Data de Nascimento) e também se relaciona com outras entidades. Em um
                 sistema de livraria, por exemplo, podem existir diversas tabelas como <i>Livro</i>, <i>Autor</i>, <i>Editora</i>, <i>Cliente</i> entre outros.
             </p>
 
@@ -80,7 +79,7 @@ const Sql = () => (
 
 
                 <h5>Atributos Simples</h5>
-                <p>São os atributos mais comuns existentes. São indivisíveis e representam um valor único, como <i>CPF</i>, <i>Nome</i>, 
+                <p>São os atributos mais comuns existentes. São indivisíveis e representam um valor único, como <i>CPF</i>, <i>Nome</i>,
                 <i>Preço</i>, <i>Data de Fabricação</i>.</p>
 
                 <h5>Atributos Compostos</h5>
@@ -453,7 +452,7 @@ const Sql = () => (
 
         </details>
 
-        {/* 
+        {/*
         <details className="materia">
             <summary>Engenharia de Dados</summary>
         </details> */}
