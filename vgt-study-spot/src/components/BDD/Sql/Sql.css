@@ -87,7 +87,7 @@ span {
     font-family: 'Inconsolata';
     padding: 1% 3% 1% 3%;
     border-radius: 10px;
-    margin: 1vh 3vh 3vh 3vh;
+    margin: 1vh 3vh 1vh 3vh;
 }
 
 .comentario {
@@ -110,6 +110,42 @@ img {
     border: 1px solid black;
     border-radius: 10px;
 }
+
+table {
+    margin: auto;
+    box-shadow: -1px 1px 4px gray;
+    font-family: 'Inconsolata';
+    margin-bottom: 6vh;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    padding: 5px 12px 2px 12px;
+}
+
+tr:nth-child(2n) {
+    background-color: rgb(144, 144, 202);
+    border: 1px solid gray;
+    font-size: 12pt;
+}
+
+tr:nth-child(2n + 1) {
+    background-color: rgb(228, 228, 228);
+    border: 1px solid gray;
+    font-size: 12pt;
+}
+
+tr:nth-child(1), 
+tr:nth-child(2) {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    font-size: 10pt;
+}
+
+
+
+
 
 @media screen and (max-width: 768px) {
 
