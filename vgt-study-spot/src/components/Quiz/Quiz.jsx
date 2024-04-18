@@ -2,6 +2,11 @@ import React, { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import questions from "./questions.json"
 import Nav from '../Nav/Nav';
+import correct from "./audio/correct.mp3"
+import incorrect from "./audio/incorrect.mp3"
+
+const audioC = new Audio(correct)
+const audioI = new Audio(incorrect)
 
 const EnglishVocabularyTraining = () => {
   let currentQuestionIndex = 0;
@@ -30,7 +35,7 @@ const EnglishVocabularyTraining = () => {
 
     questionElement.innerHTML =
       "<p class='text-center text-wrap fs-5 text-info'>" +
-      question.word +
+      question.question +
       "</p>";
     optionsElement.innerHTML = "";
 
@@ -50,7 +55,7 @@ const EnglishVocabularyTraining = () => {
       button.classList.remove("btn-primary");
       button.classList.add("btn-success");
       totalCorrect++;
-    //   document.getElementById("correctSound").play();
+      audioC.play();
     } else {
       button.classList.remove("btn-primary");
       button.classList.add("btn-danger");
@@ -60,7 +65,7 @@ const EnglishVocabularyTraining = () => {
           btn.classList.add("btn-success");
         }
       });
-    //   document.getElementById("incorrectSound").play();
+      audioI.play();
     }
 
     setTimeout(() => {
@@ -85,11 +90,11 @@ const EnglishVocabularyTraining = () => {
     <>
       <Nav />
       <div class="text-center page">
-        <h1 class="my-5 fw-semibold">English Vocabulary Training</h1>
+        <h1 class="my-5 fw-semibold">SQL Training Quiz</h1>
 
         <div class="title" id="question"></div>
 
-        <p class="text-wrap fs-6">Clique na respectiva tradução:</p>
+        <p class="text-wrap fs-6">Clique na alternativa correta:</p>
 
         <div
           class="my-4 d-flex justify-content-center flex-wrap"
