@@ -2,6 +2,11 @@ import React, { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import questions from "./questions.json"
 import Nav from '../Nav/Nav';
+import correct from "./audio/correct.mp3"
+import incorrect from "./audio/incorrect.mp3"
+
+const audioC = new Audio(correct)
+const audioI = new Audio(incorrect)
 
 const EnglishVocabularyTraining = () => {
   let currentQuestionIndex = 0;
@@ -50,7 +55,7 @@ const EnglishVocabularyTraining = () => {
       button.classList.remove("btn-primary");
       button.classList.add("btn-success");
       totalCorrect++;
-    //   document.getElementById("correctSound").play();
+      audioC.play();
     } else {
       button.classList.remove("btn-primary");
       button.classList.add("btn-danger");
@@ -60,7 +65,7 @@ const EnglishVocabularyTraining = () => {
           btn.classList.add("btn-success");
         }
       });
-    //   document.getElementById("incorrectSound").play();
+      audioI.play();
     }
 
     setTimeout(() => {
