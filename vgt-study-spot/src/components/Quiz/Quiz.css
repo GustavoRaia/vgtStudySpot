@@ -8,3 +8,8 @@ body {
     font-weight: 500;
     margin-top: 10em;
 }
+
+#options{
+    width: 60%;
+    margin: 0 auto;
+}

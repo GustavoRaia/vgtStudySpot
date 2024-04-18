@@ -30,7 +30,7 @@ const EnglishVocabularyTraining = () => {
 
     questionElement.innerHTML =
       "<p class='text-center text-wrap fs-5 text-info'>" +
-      question.word +
+      question.question +
       "</p>";
     optionsElement.innerHTML = "";
 
@@ -85,11 +85,11 @@ const EnglishVocabularyTraining = () => {
     <>
       <Nav />
       <div class="text-center page">
-        <h1 class="my-5 fw-semibold">English Vocabulary Training</h1>
+        <h1 class="my-5 fw-semibold">SQL Training Quiz</h1>
 
         <div class="title" id="question"></div>
 
-        <p class="text-wrap fs-6">Clique na respectiva tradução:</p>
+        <p class="text-wrap fs-6">Clique na alternativa correta:</p>
 
         <div
           class="my-4 d-flex justify-content-center flex-wrap"

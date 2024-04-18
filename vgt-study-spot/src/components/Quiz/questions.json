@@ -1,52 +1,104 @@
 [
     {
-        "word": "Rabo de cavalo",
-        "correctAnswer": "Ponytail",
-        "options": ["Hairtail", "Horse", "Tail", "Ponytail", "Headtail"]
+        "question": "Qual é a função do SQL SELECT?",
+        "correctAnswer": "Selecionar dados de uma tabela.",
+        "options": [
+            "Inserir dados em uma tabela.",
+            "Atualizar dados em uma tabela.",
+            "Excluir dados de uma tabela.",
+            "Selecionar dados de uma tabela."
+        ]
     },
     {
-        "word": "Maçaneta",
-        "correctAnswer": "Doorknob",
-        "options": ["Door Opener", "Doorknob", "Lock", "Window", "Apple Neet"]
+        "question": "O que o SQL INSERT faz?",
+        "correctAnswer": "Insere novos dados em uma tabela.",
+        "options": [
+            "Atualiza dados em uma tabela.",
+            "Exclui dados de uma tabela.",
+            "Seleciona dados de uma tabela.",
+            "Insere novos dados em uma tabela."
+        ]
     },
     {
-        "word": "Semáforo",
-        "correctAnswer": "Traffic light",
-        "options": ["Traffic light", "Street Lamp", "Car Lights", "Street Signs", "Sign"]
+        "question": "Qual é a cláusula usada para filtrar registros em SQL?",
+        "correctAnswer": "WHERE",
+        "options": [
+            "SELECT",
+            "FROM",
+            "WHERE",
+            "ORDER BY",
+            "GROUP BY"
+        ]
     },
     {
-        "word": "Guarda-chuva",
-        "correctAnswer": "Umbrella",
-        "options": ["Umbrella", "Raincoat", "Hat", "Shoe", "Glove"]
+        "question": "O que a cláusula SQL WHERE faz?",
+        "correctAnswer": "Filtra os registros com base em uma condição específica.",
+        "options": [
+            "Seleciona todos os registros de uma tabela.",
+            "Agrupa registros com base em uma coluna.",
+            "Ordena os registros em ordem crescente.",
+            "Filtra os registros com base em uma condição específica."
+        ]
     },
     {
-        "word": "Lanterna",
-        "correctAnswer": "Flashlight",
-        "options": ["Light", "Torch", "Flashlight", "Candle", "Battery"]
+        "question": "Qual é o comando SQL para excluir registros de uma tabela?",
+        "correctAnswer": "DELETE FROM table_name WHERE condition;",
+        "options": [
+            "REMOVE FROM table_name WHERE condition;",
+            "DELETE FROM table_name WHERE condition;",
+            "ERASE FROM table_name WHERE condition;",
+            "EXCLUDE FROM table_name WHERE condition;"
+        ]
     },
     {
-        "word": "Chiclete",
-        "correctAnswer": "Chewing gum",
-        "options": ["Candy", "Bubble candy", "Chewing gum", "Chocolate", "Lollipop"]
+        "question": "O que o comando SQL UPDATE faz?",
+        "correctAnswer": "Atualiza os dados existentes em uma tabela.",
+        "options": [
+            "Insere novos dados em uma tabela.",
+            "Exclui dados de uma tabela.",
+            "Atualiza os dados existentes em uma tabela.",
+            "Seleciona dados de uma tabela."
+        ]
     },
     {
-        "word": "Abacaxi",
-        "correctAnswer": "Pineapple",
-        "options": ["Peach", "Apple", "Banana", "Grape", "Pineapple"]
+        "question": "Qual é a cláusula SQL usada para classificar os resultados de uma consulta?",
+        "correctAnswer": "ORDER BY",
+        "options": [
+            "SELECT",
+            "FROM",
+            "WHERE",
+            "ORDER BY",
+            "GROUP BY"
+        ]
     },
     {
-        "word": "Esquilo",
-        "correctAnswer": "Squirrel",
-        "options": ["Squirrel", "Mouse", "Rabbit", "Chipmunk", "Rat"]
+        "question": "O que a cláusula SQL ORDER BY faz?",
+        "correctAnswer": "Ordena os resultados de uma consulta em ordem ascendente ou descendente.",
+        "options": [
+            "Seleciona todos os registros de uma tabela.",
+            "Agrupa registros com base em uma coluna.",
+            "Ordena os resultados de uma consulta em ordem ascendente ou descendente.",
+            "Filtra os registros com base em uma condição específica."
+        ]
     },
     {
-        "word": "Alicate",
-        "correctAnswer": "Pliers",
-        "options": ["Hammer", "Screwdriver", "Wrench", "Pliers", "Scissors"]
+        "question": "Qual é a função da cláusula SQL GROUP BY?",
+        "correctAnswer": "Agrupa os resultados de uma consulta com base em uma coluna.",
+        "options": [
+            "Seleciona todos os registros de uma tabela.",
+            "Agrupa os resultados de uma consulta com base em uma coluna.",
+            "Ordena os registros em ordem crescente.",
+            "Filtra os registros com base em uma condição específica."
+        ]
     },
     {
-        "word": "Corrimão",
-        "correctAnswer": "Handrail",
-        "options": ["Fence", "Gate", "Ladder", "Handrail", "Staircase"]
+        "question": "O que a cláusula SQL HAVING faz?",
+        "correctAnswer": "Filtra os resultados de uma consulta após a cláusula GROUP BY.",
+        "options": [
+            "Filtra os resultados de uma consulta após a cláusula GROUP BY.",
+            "Ordena os resultados de uma consulta.",
+            "Agrupa os resultados de uma consulta com base em uma coluna.",
+            "Seleciona todos os registros de uma tabela."
+        ]
     }
 ]
