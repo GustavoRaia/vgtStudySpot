@@ -15,4 +15,7 @@ O vgtStudySpot é um site desenvolvido em React que oferece conteúdos sobre SQL
 
 Este projeto está licenciado sob a [MIT License](vgt-study-spot/MIT_License.txt), pertencente a [VGT Developments](https://vgt-developments.vercel.app/).
 
+![vulpes](https://static.wikia.nocookie.net/fallout/images/4/4e/VulpesIncultaIncognito.png/revision/latest?cb=20111219170114)
+
+
 
