@@ -1,5 +1,5 @@
 import './Sql.css';
-import copy from'./img/copia-de.png';
+import copy from './img/copia-de.png';
 
 const Sql = () => (
     <div className="container">
@@ -200,6 +200,13 @@ const Sql = () => (
                 </h5>
 
                 <img src="https://editor.analyticsvidhya.com/uploads/41458sqlll.jpeg" alt="" />
+
+                <div className='link'>
+                    <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                    <div className='textoVideo'>
+                        MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                    </div>
+                </div>
 
                 <details>
                     <summary>DDL</summary>
