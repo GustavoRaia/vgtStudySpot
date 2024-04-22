@@ -201,13 +201,23 @@ const Sql = () => (
 
                 <img src="https://editor.analyticsvidhya.com/uploads/41458sqlll.jpeg" alt="" />
 
-                <a href="https://www.youtube.com/watch?v=p7PeZaP6Ku8">
-                    <div className='link'>
+                <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
                         <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                         <div className='textoVideo'>
                             MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
                         </div>
-                    </div>
+                </a>
+                <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                        <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                        <div className='textoVideo'>
+                            MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                        </div>
+                </a>
+                <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                        <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                        <div className='textoVideo'>
+                            MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                        </div>
                 </a>
 
 
@@ -236,9 +246,9 @@ const Sql = () => (
                         <summary>Exemplos</summary>
                         <br />
                         <div className="div-exemplos">
-                            {/* <div className='btnCopia'>
-                                <img src={copy} alt="" />
-                            </div> */}
+                            <div className='btnCopia'>
+                                <img src="https://cdn-icons-png.freepik.com/512/7944/7944902.png" alt="" />
+                            </div>
                             <p className="comentario">-- Adicionando um comentário</p>
                             <p>CREATE TABLE cliente ( <br />
                                 &nbsp;&nbsp;id INT UNIQUE NOT NULL, <br />
