@@ -1,4 +1,5 @@
 import './Sql.css';
+import copy from'./img/copia-de.png';
 
 const Sql = () => (
     <div className="container">
@@ -170,7 +171,13 @@ const Sql = () => (
 
         <details className="materia">
             <summary>SQL</summary>
-            <p>Structured Query Language - Linguagem criada para manipular dados em bancos de dados relacionais.</p>
+            <p>Structured Query Language - Linguagem criada para manipular dados em bancos de dados relacionais. Nesse resumo vamos entender melhor as sublinguagens de SQL, os tipos de dados utilizados em um banco e como trabalha um profissional da área.</p>
+
+            <p>Enrico Maranho</p>
+
+            <h4>
+                Os SGBDs mais utilizados são:
+            </h4>
             <p>
                 <ul>
                     <li>MySQL</li>
@@ -183,6 +190,16 @@ const Sql = () => (
 
             <details>
                 <summary>Sublinguagens</summary>
+
+                <p>
+                    O SQL possui Sublinguagens, que definem a forma como os dados serão manipulados no seu banco. Isso significa que cada uma dessas linguagens possui comandos específicos para a forma que a manipulação será realizada. Veja o esquema a seguir:
+                </p>
+
+                <h5>
+                    O exemplo abaixo mostra como se comportam as sublinguagens de SQL e seus principais comandos:
+                </h5>
+
+                <img src="https://editor.analyticsvidhya.com/uploads/41458sqlll.jpeg" alt="" />
 
                 <details>
                     <summary>DDL</summary>
@@ -209,6 +226,9 @@ const Sql = () => (
                         <summary>Exemplos</summary>
                         <br />
                         <div className="div-exemplos">
+                            <div className='btnCopia'>
+                                <img src={copy} alt="" />
+                            </div>
                             <p className="comentario">-- Adicionando um comentário</p>
                             <p>CREATE TABLE cliente ( <br />
                                 &nbsp;&nbsp;id INT UNIQUE NOT NULL, <br />
@@ -222,52 +242,38 @@ const Sql = () => (
                             </p>
                         </div>
 
-                        <table>
-                            <tr>
-                                <th colSpan={6}>cliente</th>
-                            </tr>
-                            <tr>
-                                <td>id</td>
-                                <td>telefone</td>
-                                <td>nome</td>
-                                <td>endereco</td>
-                                <td>ponto_referencia</td>
-                                <td>nascimento</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>McDonald's</td>
-                                <td>Tocha 1</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>null</td>
-                                <td>Tocha 1</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>Casa do Puterrier</td>
-                                <td>Tocha 1</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>Tocha 1</td>
-                                <td>null</td>
-                                <td>Tocha 1</td>
-                            </tr>
+                        <div className='tableResp'>
+                            <table>
+                                <tr>
+                                    <th colSpan={6}>cliente</th>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>telefone</td>
+                                    <td>nome</td>
+                                    <td>endereco</td>
+                                    <td>ponto_referencia</td>
+                                    <td>nascimento</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>tel1</td>
+                                    <td>Tocha</td>
+                                    <td>Tocha</td>
+                                    <td>McDonald's</td>
+                                    <td>Tocha</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>tel2</td>
+                                    <td>Tocha</td>
+                                    <td>Tocha</td>
+                                    <td>null</td>
+                                    <td>Tocha</td>
+                                </tr>
 
-                        </table>
+                            </table>
+                        </div>
 
                         <div className="div-exemplos">
                             <p classNameName='comentario'>-- Criação de Tabela</p>
@@ -553,6 +559,9 @@ const Sql = () => (
 
             <details>
                 <summary>Tipos de Dados</summary>
+
+                <p>No momento de criação ou consulta de uma tabela, é importante entender quais são os tipos de dados de cada atributo e como aplicá-los corretamente</p>
+
             </details>
 
             <details>
