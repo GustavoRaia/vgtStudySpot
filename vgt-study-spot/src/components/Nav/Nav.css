@@ -1,7 +1,8 @@
 .barra-nav {
     display: flex;
-    justify-content: center;
-    background-color: white;
+    justify-content: baseline;
+    border-bottom: 1px solid gray;
+    /* background-color: white; */
 }
 
 .barra-nav_lista {
@@ -23,7 +24,8 @@
 .barra-nav_A {
     font-size: 20px;
     text-decoration: none;
-    color: #282C34;
+    /* color: #282C34; */
+    color: white;
     font-weight: 600;
 }
 

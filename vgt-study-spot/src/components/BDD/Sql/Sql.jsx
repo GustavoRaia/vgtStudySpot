@@ -201,26 +201,6 @@ const Sql = () => (
 
                 <img src="https://editor.analyticsvidhya.com/uploads/41458sqlll.jpeg" alt="" />
 
-                <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
-                        <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
-                        <div className='textoVideo'>
-                            MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
-                        </div>
-                </a>
-                <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
-                        <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
-                        <div className='textoVideo'>
-                            MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
-                        </div>
-                </a>
-                <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
-                        <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
-                        <div className='textoVideo'>
-                            MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
-                        </div>
-                </a>
-
-
                 <details>
                     <summary>DDL</summary>
                     <p>
@@ -242,6 +222,7 @@ const Sql = () => (
                             <span>NOT NULL</span>
                         </div>
                     </details>
+
                     <details>
                         <summary>Exemplos</summary>
                         <br />
@@ -314,6 +295,20 @@ const Sql = () => (
                                 );</p>
                         </div>
                     </details>
+
+                    <details className='listaVideos'>
+                        <summary>Vídeos de Apoio</summary>
+
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                            <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                            <div className='textoVideo'>
+                                <h5>Cláusula Distinct</h5>
+                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                            </div>
+                        </a>
+
+                    </details>
+
                 </details>
 
                 <details>
@@ -406,6 +401,18 @@ const Sql = () => (
                             </div>
                         </details>
                     </details>
+                    <details className='listaVideos'>
+                        <summary>Vídeos de Apoio</summary>
+
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                            <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                            <div className='textoVideo'>
+                                <h5>Cláusula Distinct</h5>
+                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                            </div>
+                        </a>
+
+                    </details>
                 </details>
 
                 <details>
@@ -443,7 +450,6 @@ const Sql = () => (
                             <li>SELECT</li>
                         </ul>
                     </details>
-
                     <details>
                         <summary>Exemplos</summary>
                         <br />
@@ -555,6 +561,18 @@ const Sql = () => (
                                 FROM fornecedores;</p>
                         </div>
                     </details>
+                    <details className='listaVideos'>
+                        <summary>Vídeos de Apoio</summary>
+
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                            <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                            <div className='textoVideo'>
+                                <h5>Cláusula Distinct</h5>
+                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                            </div>
+                        </a>
+
+                    </details>
                 </details>
 
                 <details>
@@ -573,6 +591,25 @@ const Sql = () => (
                             <span>REVOKE</span>
                             <span>DENY</span>
                         </div>
+                    </details>
+                    <details className='listaVideos'>
+                        <summary>Vídeos de Apoio</summary>
+
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                            <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                            <div className='textoVideo'>
+                                <h5>Cláusula Distinct</h5>
+                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                            </div>
+                        </a>
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                            <img src="http://img.youtube.com/vi/2qCLpE1NZ8c/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                            <div className='textoVideo'>
+                                <h5>Subqueries</h5>
+                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                            </div>
+                        </a>
+
                     </details>
                 </details>
             </details>
@@ -629,7 +666,6 @@ const Sql = () => (
                         <p>SELECT * FROM banco_de_dados;</p>
                         <p>SELECT * FROM banco_de_dados;</p>
                     </div>
-
                 </details>
 
                 <details>
@@ -638,7 +674,6 @@ const Sql = () => (
                     <div className="div-exemplos">
                         <p classNameName='comentario'>-- Comentário Inútil</p>
                     </div>
-
                 </details>
 
             </details>
