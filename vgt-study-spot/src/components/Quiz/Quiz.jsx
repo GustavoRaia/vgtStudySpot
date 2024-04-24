@@ -107,9 +107,6 @@ const EnglishVocabularyTraining = () => {
           </button>
         </div>
       </div>
-
-      <audio id="correctSound" src="./audio/correct.mp3"></audio>
-      <audio id="incorrectSound" src="./audio/incorrect.mp3"></audio>
     </>
   );
 };

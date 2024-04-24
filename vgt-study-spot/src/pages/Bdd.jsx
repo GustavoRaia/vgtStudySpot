@@ -1,12 +1,14 @@
-import Sql from '../components/BDD/Sql/Sql.jsx';
-import '../components/BDD/Sql/Sql.css';
 import Nav from '../components/Nav/Nav.jsx';
+import Bd from '../components/BDD/Bdd.jsx'
+import Footer from '../components/Footer/Footer.jsx';
+import './Index.css';
 
 function Bdd() {
   return (
     <body>
       <Nav />
-      <Sql />
+      <Bd />
+      <Footer />
     </body>
 
   );

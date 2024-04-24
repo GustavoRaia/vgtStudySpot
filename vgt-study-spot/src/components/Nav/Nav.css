@@ -30,31 +30,5 @@
 }
 
 .barra-nav_A:hover {
-    color: #2F6080;
-}
-
-.barra-nav_foto {
-    width: 100px;
-    margin: 0.5em 2em;
-}
-
-@media (max-width: 1023px) {
-    .barra-nav_A {
-        display: none;
-    }
-    .barra-nav {
-        width: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-    .barra-nav {
-        display: block;
-    }
-    .barra-nav_item, .barra-nav_item-g{
-        display: none;
-    }
-    .barra-nav_lista{
-        display: block;
-    }
+    color: gray;
 }
