@@ -1,4 +1,4 @@
-body {
+body, html {
     font-family: 'IBM Plex Sans';
     background-color: #1b2a34;
     color: white;
@@ -6,7 +6,7 @@ body {
 
 .page {
     font-weight: 500;
-    margin-top: 10em;
+    margin: 5em;
 }
 
 #options{
