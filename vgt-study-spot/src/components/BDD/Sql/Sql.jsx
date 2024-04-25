@@ -138,7 +138,7 @@ const Sql = () => (
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
-                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                                VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
 
@@ -243,7 +243,7 @@ const Sql = () => (
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
-                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                                VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
 
@@ -403,14 +403,14 @@ const Sql = () => (
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
-                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                                VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
                         <a className='link' href="https://www.youtube.com/watch?v=2qCLpE1NZ8c" target='_blank'>
                             <img src="http://img.youtube.com/vi/2qCLpE1NZ8c/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Subconsultas</h5>
-                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                                VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
 
@@ -441,7 +441,7 @@ const Sql = () => (
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
-                                MERDER tentando entender como essa porra desse display funciona pq eu ja n to entendendo mais nada nessa porra e agora vou pressonal Alt + Z
+                                VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
 
