@@ -1,6 +1,14 @@
 import './Sql.css';
 import copy from './img/copia-de.png';
 
+function handleSubmit(e) {
+    var elementoPai = document.getElementById(e).closest('.div-exemplos');
+    var textoPai = elementoPai.textContent.replaceAll(", ", ",").replaceAll("( ", "(");
+    var textoPai2 = textoPai.replaceAll("\t", "n").replaceAll("( ", "n");
+    navigator.clipboard.writeText(textoPai2);
+    window.alert("Texto Copiado para a Área de Transferência!")
+}
+
 const Sql = () => (
     <div className="container">
 
@@ -62,10 +70,10 @@ const Sql = () => (
                         <summary>Exemplos</summary>
                         <br />
                         <div className="div-exemplos">
-                            <div className='btnCopia'>
+                            <div className='btnCopia' id='teste' onClick={() => handleSubmit('teste')}>
                                 <img src={copy} alt="" />
                             </div>
-                            <p className="comentario">-- Adicionando um comentário</p>
+                            {/* <p className="comentario">-- Adicionando um comentário</p> */}
                             <p>CREATE TABLE cliente ( <br />
                                 &nbsp;&nbsp;id INT UNIQUE NOT NULL, <br />
                                 &nbsp;&nbsp;telefone VARCHAR(255) NOT NULL, <br />
@@ -121,12 +129,10 @@ const Sql = () => (
                                 &nbsp;&nbsp;id_entregador INT NOT NULL, <br />
                                 &nbsp;&nbsp;status VARCHAR(255) NULL, <br />
                                 &nbsp;&nbsp;taxa_entrega VARCHAR(255) NULL, <br />
-                                &nbsp;&nbsp;data DATETIME NOT NULL DEFAULT CURDATE(), <br />
+                                &nbsp;&nbsp;data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(), <br /><br />
 
                                 <p classNameName='comentario'>&nbsp;&nbsp;-- Criação da Primary Key e das Foreign Keys</p>
-                                &nbsp;&nbsp;CONSTRAINT PK_Pedido PRIMARY KEY (id), <br />
-                                &nbsp;&nbsp;CONSTRAINT FK_Pedido_Entregador FOREIGN KEY (id_entregador) REFERENCES entregador(id) ON DELETE CASCADE, <br />
-                                &nbsp;&nbsp;CONSTRAINT FK_Pedido_Cliente FOREIGN KEY (telefone_cliente) REFERENCES cliente(telefone)ON DELETE CASCADE <br />
+                                &nbsp;&nbsp;CONSTRAINT PK_Pedido PRIMARY KEY (id)<br />
                                 );</p>
                         </div>
                     </details>
@@ -134,7 +140,7 @@ const Sql = () => (
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
 
-                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
@@ -239,7 +245,7 @@ const Sql = () => (
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
 
-                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
@@ -399,14 +405,14 @@ const Sql = () => (
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
 
-                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
                                 VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
-                        <a className='link' href="https://www.youtube.com/watch?v=2qCLpE1NZ8c" target='_blank'>
+                        <a className='link' href="https://www.youtube.com/watch?v=2qCLpE1NZ8c" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/2qCLpE1NZ8c/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Subconsultas</h5>
@@ -437,7 +443,7 @@ const Sql = () => (
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
 
-                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank'>
+                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
                                 <h5>Cláusula Distinct</h5>
@@ -515,6 +521,14 @@ const Sql = () => (
 
             <details>
                 <summary>Administração do Banco</summary>
+
+                <details>
+                    <summary>Planos de Execução</summary>
+                </details>
+                <details>
+                    <summary>Criação de Usuários</summary>
+                </details>
+
             </details>
 
         </details>
