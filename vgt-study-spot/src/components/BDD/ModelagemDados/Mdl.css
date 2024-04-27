@@ -7,16 +7,18 @@ body {
     color: white;
 }
 
-.container {
+/* .container {
     margin-top: 5vh;
     margin-bottom: 5vh;
-}
+} */
 
 .materia {
     width: clamp(60vw, 85%, 100vw);
     margin: auto;
     margin-top: 3vh;
     margin-bottom: 3vh;
+    box-shadow: 3px 3px 0px transparent;
+    border: 1px solid transparent;
 }
 
 details>details,
@@ -32,10 +34,9 @@ details {
     margin: 1em;
     padding: 1em;
     border: 1px solid #1b2a34;
-    ;
     background-color: white;
-    color: #1b2a34;
     box-shadow: 3px 3px 0px gray;
+    color: #1b2a34;
     border-radius: 5px;
 }
 
@@ -110,18 +111,25 @@ img {
 }
 
 .obs {
-    background-color: wheat;
-    margin: 2% 10% 3% 10%;
+    background-color: whitesmoke;
+    margin: 4% 10% 3% 10%;
     padding: 2%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    box-shadow: -1px 1px 5px rgba(128, 128, 128, 0.514);
     border-radius: 10px;
+}
+.obs>a {
+    text-decoration: none;
 }
 
 .tableResp {
     overflow-x: auto;
     /* border: 1px solid gray;
     border-width: 0px 1px 1px 1px; */
-    margin: 6vh 0vh 6vh 0vh;
+    margin: 3vh 0vh 5vh 0vh;
+}
+.tableResp:has(overflow-x) {
+    background-color: blue;
 }
 table {
     margin: auto;
@@ -170,7 +178,7 @@ tr:nth-child(2) {
     border: 1px solid black;
     border-radius: 5px;
     margin: auto;
-    width: 30vw;
+    width: clamp(65%, 80%, 80%);
     display: flex;
     flex: 1 1 auto;
     text-decoration: none;
@@ -178,8 +186,6 @@ tr:nth-child(2) {
     background-color: whitesmoke;
 }
 .link > img {
-    /* border: 1px solid black; */
-    /* height: 19vh; */
     width: 40%;
     padding: 0;
     border-radius: 0;
@@ -193,6 +199,7 @@ tr:nth-child(2) {
     margin: 5px;
     padding: 15px;
     text-align: center;
+    font-size: 11pt;
 }
 
 .link:nth-child(2n) {
@@ -204,18 +211,28 @@ tr:nth-child(2) {
     box-shadow: -1px 1px 4px gray;
 }
 
+@media screen and (max-width: 991px) {
+    .link {
+        width: clamp(70%, 90%, 80%);
+        flex-direction: column !important;
+        font-size: 10pt;
+    }
+    .link>img {
+        width: 100%;
+    }
+}
 @media screen and (max-width: 768px) {
 
     details>details,
     details>h4,
     details>div,
     details>p {
-        margin-left: 1vw;
-        margin-right: 1vw;
+        margin-left: 0.5vw;
+        margin-right: 0.5vw;
     }
 
     details {
-        margin: 0.5em;
+        margin: 0.2em;
         padding: 0.5em;
     }
 

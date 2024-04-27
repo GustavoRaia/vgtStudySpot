@@ -1,4 +1,4 @@
-import './Sql.css';
+// import './Sql.css';
 import copy from './img/copia-de.png';
 
 function handleSubmit(e) {
@@ -8,6 +8,18 @@ function handleSubmit(e) {
     navigator.clipboard.writeText(textoPai2);
     window.alert("Texto Copiado para a Área de Transferência!")
 }
+
+// function jurubebar() {
+//     const listaImportante = ['CREATE', 'TABLE'];
+//     document.querySelectorAll('.cod').forEach(element => {
+//         var kutus = element.textContent;
+//         if(kutus.includes('CREATE')) {
+//             window.alert('HAHAHAHAHA');
+//         }
+//     });
+// }
+
+// jurubebar();
 
 const Sql = () => (
     <div className="container">
@@ -69,21 +81,39 @@ const Sql = () => (
                     <details>
                         <summary>Exemplos</summary>
                         <br />
+                        <h5>Criação de Tabelas</h5>
+                        <hr />
+
+                        <p>Antes de começar, é importante que seja criado uma base de dados, como sugerido na tela abaixo.</p>
+                        <div className='div-exemplos'>
+                            CREATE SCHEMA minha_base; <br />
+                            CREATE DATABASE minha_base;
+                        </div>
+                        <br />
+
+                        <h5>Criação de uma tabela de Cliente</h5>
                         <div className="div-exemplos">
                             <div className='btnCopia' id='teste' onClick={() => handleSubmit('teste')}>
                                 <img src={copy} alt="" />
                             </div>
-                            {/* <p className="comentario">-- Adicionando um comentário</p> */}
-                            <p>CREATE TABLE cliente ( <br />
-                                &nbsp;&nbsp;id INT UNIQUE NOT NULL, <br />
-                                &nbsp;&nbsp;telefone VARCHAR(255) NOT NULL, <br />
-                                &nbsp;&nbsp;nome VARCHAR(255) NOT NULL, <br />
-                                &nbsp;&nbsp;endereco VARCHAR(255) NULL, <br />
-                                &nbsp;&nbsp;ponto_referencia VARCHAR(255) NULL, <br />
-                                &nbsp;&nbsp;nascimento DATE NULL, <br />
-                                &nbsp;&nbsp;CONSTRAINT pk_cliente PRIMARY KEY (id) <br />
+                            <p className='comentario'>-- O Atributo NOT NULL significa que a tabela deve ser preenchida</p>
+                            <p className='comentario'>-- O Atributo NULL significa que a tabela pode não ser preenchida</p>
+                            <p className='cod'>CREATE TABLE cliente ( <br />
+                                &nbsp;&nbsp;id INT NOT NULL, <br />
+                                &nbsp;&nbsp;telefone VARCHAR(20) NOT NULL, <br />
+                                &nbsp;&nbsp;nome VARCHAR(100) NOT NULL, <br />
+                                &nbsp;&nbsp;data_nascimento DATE NOT NULL, <br />
+                                &nbsp;&nbsp;endereco VARCHAR(200) NOT NULL, <br />
+                                &nbsp;&nbsp;ponto_referencia VARCHAR(50) NULL, <br />
+                                &nbsp;&nbsp;PRIMARY KEY (id) <br />
                                 );
                             </p>
+                            <p className='comentario'>-- A definição da PRIMARY KEY representa um atributo cujo valor não pode se repetir e que também será um identificador da coluna, facilitando as consultas.</p>
+                        </div>
+
+                        <div className='obs'>
+                            <p>A definição do atributo NOT NULL para uma coluna <b>chave primária</b> pode ser considerado uma boa prática, apesar de ser considerada redundante.</p>
+                            <a href="https://cursos.alura.com.br/forum/topico-duvida-e-redundancia-colocar-not-null-ao-definir-uma-chave-primaria-317263" target='_blank' rel='noreferrer'>Link da dúvida</a>
                         </div>
 
                         <div className='tableResp'>
@@ -95,25 +125,25 @@ const Sql = () => (
                                     <td>id</td>
                                     <td>telefone</td>
                                     <td>nome</td>
+                                    <td>data_nascimento</td>
                                     <td>endereco</td>
                                     <td>ponto_referencia</td>
-                                    <td>nascimento</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td>tel1</td>
-                                    <td>Tocha</td>
-                                    <td>Tocha</td>
-                                    <td>McDonald's</td>
-                                    <td>Tocha</td>
+                                    <td>nome1</td>
+                                    <td>nasc1</td>
+                                    <td>end1</td>
+                                    <td>ref1</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>tel2</td>
-                                    <td>Tocha</td>
-                                    <td>Tocha</td>
+                                    <td>nome2</td>
+                                    <td>nasc2</td>
+                                    <td>end2</td>
                                     <td>null</td>
-                                    <td>Tocha</td>
                                 </tr>
 
                             </table>
@@ -135,6 +165,35 @@ const Sql = () => (
                                 &nbsp;&nbsp;CONSTRAINT PK_Pedido PRIMARY KEY (id)<br />
                                 );</p>
                         </div>
+
+                        <br />
+                        <h5>Alteração de Tabelas</h5>
+                        <hr />
+
+                        <div className='div-exemplos'>
+                            <p className='comentario'>-- Alteração de uma tabela na base de dados</p>
+                            <p className='comentario'>-- Adição da coluna de CPF, que é um atributo único que não pode ser nulo</p>
+                            <p>ALTER TABLE cliente ADD COLUMN CPF VARCHAR(14) UNIQUE NOT NULL;</p>
+                        </div>
+
+                        <div className='obs'>
+                            <h6>Qual tipo de dado ideal para CPF ?</h6>
+                            <hr />
+                            <p>Não existe um padrão para a escolha do tipo de dados para campos como CPF, CNPJ. Pode ser tanto utilizado o CHAR, quanto o VARHCAR ou até mesmo INT. Tudo depende de como você organiza o seu projeto e para que serão utilizados os dados.</p>
+                            <p>O tipo INT, por exemplo, remove casas com valor 0 à esquerda, o que é prejudicial para a integridade do dado</p>
+                            <a href="https://pt.stackoverflow.com/questions/47871/tipo-do-campo-cpf-ou-cnpj-no-banco-de-dados-varchar-ou-int" target='_blank' rel='noreferrer'>Link da Discussão</a>
+                        </div>
+
+                        <br />
+                        <h5>Exclusão de Tabelas</h5>
+                        <hr />
+
+                        <div className='div-exemplos'>
+                            <p className='comentario'>-- Exclusão de uma tabela da base de dados</p>
+                            <p className='comentario'>-- A tabela irá deixar de existir assim como os valores armazenados</p>
+                            <p>DROP TABLE IF EXISTS cliente;</p>
+                        </div>
+
                     </details>
 
                     <details className='listaVideos'>
@@ -295,8 +354,9 @@ const Sql = () => (
                         <summary>Exemplos</summary>
                         <br />
                         <div className='obs'>
-                            <p>Para os exemplos, será utilizada a base de dados <b>sakila</b>, que já vem instalada no MySQL Workbench.</p>
-                            <p>Em alguns casos, será utilizada a cláusula <span>LIMIT</span>, já que algumas consultas retornam uma grande quantidade de linhas.</p>
+                            <p>Para alguns dos exemplos, serão utilizada a base de dados <b>sakila</b> e <b>world</b></p>
+                            <p>O banco sakila é .</p>
+                            <p>Você pode fazer o download do banco sakila e de outros <i>schemas</i> nesse link: <a href="https://dev.mysql.com/doc/index-other.html" target='_blank' rel='noreferrer'>Sakila</a></p>
                         </div>
                         <br />
                         <div className="div-exemplos">
@@ -532,11 +592,6 @@ const Sql = () => (
             </details>
 
         </details>
-
-        {/*
-        <details className="materia">
-            <summary>Engenharia de Dados</summary>
-        </details> */}
 
     </div>
 );
