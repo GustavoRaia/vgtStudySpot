@@ -26,6 +26,7 @@ const Sql = () => (
 
         <details className="materia">
             <summary>SQL</summary>
+            {/* <hr /> */}
             <p>Structured Query Language - Linguagem criada para manipular dados em bancos de dados relacionais. Nesse resumo vamos entender melhor as sublinguagens de SQL, os tipos de dados utilizados em um banco e como trabalha um profissional da área.</p>
 
             <p>Enrico Maranho</p>
@@ -45,6 +46,7 @@ const Sql = () => (
 
             <details>
                 <summary>Sublinguagens</summary>
+                {/* <hr /> */}
 
                 <p>
                     O SQL possui Sublinguagens, que definem a forma como os dados serão manipulados no seu banco. Isso significa que cada uma dessas linguagens possui comandos específicos para a forma que a manipulação será realizada. Veja o esquema a seguir:
@@ -58,12 +60,14 @@ const Sql = () => (
 
                 <details>
                     <summary>DDL</summary>
+                    {/* <hr /> */}
                     <p>
                         <h4>Data Definition Language</h4>
                     </p>
                     <p>Se refere à estrutura dos dados no banco, ao esqueleto das tabelas como um todo.</p>
                     <details>
                         <summary>Comandos e Atributos</summary>
+                        {/* <hr /> */}
                         <br />
                         <div className="div-comandos">
                             <span>CREATE</span>
@@ -75,11 +79,19 @@ const Sql = () => (
                             <span>DEFAULT</span>
                             <span>NULL</span>
                             <span>NOT NULL</span>
+                            <span>FIRST</span>
+                            <span>BEFORE</span>
+                            <span>CHANGE</span>
+                            <span>CONSTRAINT</span>
+                            <span>RENAME TO</span>
+                            <span>DESCRIBE</span>
+                            <span>SHOW</span>
                         </div>
                     </details>
 
                     <details>
                         <summary>Exemplos</summary>
+                        {/* <hr /> */}
                         <br />
                         <h5>Criação de Tabelas</h5>
                         <hr />
@@ -112,7 +124,7 @@ const Sql = () => (
                         </div>
 
                         <div className='obs'>
-                            <p>A definição do atributo NOT NULL para uma coluna <b>chave primária</b> pode ser considerado uma boa prática, apesar de ser considerada redundante.</p>
+                            <p>A definição do atributo NOT NULL para uma coluna <b>chave primária</b> pode ser considerado uma boa prática, apesar de redundante.</p>
                             <a href="https://cursos.alura.com.br/forum/topico-duvida-e-redundancia-colocar-not-null-ao-definir-uma-chave-primaria-317263" target='_blank' rel='noreferrer'>Link da dúvida</a>
                         </div>
 
@@ -122,35 +134,67 @@ const Sql = () => (
                                     <th colSpan={6}>cliente</th>
                                 </tr>
                                 <tr>
+                                    <td>Field</td>
+                                    <td>Type</td>
+                                    <td>Null</td>
+                                    <td>Key</td>
+                                    <td>Default</td>
+                                    <td>Extra</td>
+                                </tr>
+                                <tr>
                                     <td>id</td>
+                                    <td>int</td>
+                                    <td>NO</td>
+                                    <td>PRI</td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
                                     <td>telefone</td>
+                                    <td>varchar(20)</td>
+                                    <td>YES</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
                                     <td>nome</td>
+                                    <td>int</td>
+                                    <td>NO</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
                                     <td>data_nascimento</td>
+                                    <td>date</td>
+                                    <td>NO</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
                                     <td>endereco</td>
+                                    <td>varchar(200)</td>
+                                    <td>NO</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
                                     <td>ponto_referencia</td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>tel1</td>
-                                    <td>nome1</td>
-                                    <td>nasc1</td>
-                                    <td>end1</td>
-                                    <td>ref1</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>tel2</td>
-                                    <td>nome2</td>
-                                    <td>nasc2</td>
-                                    <td>end2</td>
-                                    <td>null</td>
+                                    <td>varchar(50)</td>
+                                    <td>YES</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
                                 </tr>
 
                             </table>
                         </div>
 
+                        <h5>Criação de uma Tabela de Pedido</h5>
                         <div className="div-exemplos">
-                            <p classNameName='comentario'>-- Criação de Tabela</p>
                             <p classNameName='comentario'>-- Utilização de DEFAULT (valor pré definido caso não preenchido pelo usuário)</p>
                             <p classNameName='comentario'>-- Utilização de funções definidas</p>
                             <p>CREATE TABLE IF NOT EXISTS pedido ( <br />
@@ -166,22 +210,123 @@ const Sql = () => (
                                 );</p>
                         </div>
 
+                        <div className='tableResp'>
+                            <table>
+                                <tr>
+                                    <th colSpan={6}>pedido</th>
+                                </tr>
+                                <tr>
+                                    <td>Field</td>
+                                    <td>Type</td>
+                                    <td>Null</td>
+                                    <td>Key</td>
+                                    <td>Default</td>
+                                    <td>Extra</td>
+                                </tr>
+                                <tr>
+                                    <td>id</td>
+                                    <td>int</td>
+                                    <td>NO</td>
+                                    <td>PRI</td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>telefone_cliente</td>
+                                    <td>varchar(255)</td>
+                                    <td>NO</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>id_entregador</td>
+                                    <td>int</td>
+                                    <td>NO</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>status</td>
+                                    <td>varchar(255)</td>
+                                    <td>YES</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>taxa_entrega</td>
+                                    <td>varchar(255)</td>
+                                    <td>YES</td>
+                                    <td> </td>
+                                    <td>NULL</td>
+                                    <td> </td>
+                                </tr>
+                                <tr>
+                                    <td>data</td>
+                                    <td>datetime</td>
+                                    <td>NO</td>
+                                    <td> </td>
+                                    <td>CURRENT_TIMESTAMP</td>
+                                    <td>DEFAULT_GENERATED</td>
+                                </tr>
+
+                            </table>
+                        </div>
+
                         <br />
                         <h5>Alteração de Tabelas</h5>
                         <hr />
 
+                        <p>A alteração de tabelas através da regra 'ALTER TABLE' é uma parte importante do desenvolvimento e criação de tabelas e dos relacionamentos em banco de dados.</p>
+                        <p>Essas alterações auxiliam a não recriar tabelas e também preservar dados já cadastrados.</p>
+                        <br />
+
+                        <h5>Adição de uma Coluna de CPF</h5>
                         <div className='div-exemplos'>
                             <p className='comentario'>-- Alteração de uma tabela na base de dados</p>
                             <p className='comentario'>-- Adição da coluna de CPF, que é um atributo único que não pode ser nulo</p>
                             <p>ALTER TABLE cliente ADD COLUMN CPF VARCHAR(14) UNIQUE NOT NULL;</p>
+                            <br />
+                            <p className='comentario'>-- Por padrão novas colunas sempre serão adicionadas ao final da tabela, porém você pode escolher onde a coluna ficará localizado na estrutura</p>
+                            <p className='comentario'>-- Com a cláusula AFTER 'nome_da_coluna', a coluna será adicionada logo após a coluna previamente definida</p>
+                            <p>ALTER TABLE cliente ADD COLUMN CPF VARCHAR(14) UNIQUE NOT NULL AFTER id;</p>
+                            <p className='comentario'>-- Com a cláusula FIRST, a nova coluna será adicionada no inicio da tabela</p>
+                            <p>ALTER TABLE cliente ADD COLUMN CPF VARCHAR(14) UNIQUE NOT NULL FIRST;</p>
                         </div>
 
                         <div className='obs'>
                             <h6>Qual tipo de dado ideal para CPF ?</h6>
                             <hr />
                             <p>Não existe um padrão para a escolha do tipo de dados para campos como CPF, CNPJ. Pode ser tanto utilizado o CHAR, quanto o VARHCAR ou até mesmo INT. Tudo depende de como você organiza o seu projeto e para que serão utilizados os dados.</p>
-                            <p>O tipo INT, por exemplo, remove casas com valor 0 à esquerda, o que é prejudicial para a integridade do dado</p>
+                            <p>O tipo INT, por exemplo, remove casas com valor 0 à esquerda, o que é prejudicial para a integridade do dado.</p>
                             <a href="https://pt.stackoverflow.com/questions/47871/tipo-do-campo-cpf-ou-cnpj-no-banco-de-dados-varchar-ou-int" target='_blank' rel='noreferrer'>Link da Discussão</a>
+                        </div>
+
+                        <h5>Alterando a composição de uma Coluna.</h5>
+
+                        <p>A mudança de composição de coluna demonstra a alteração de possíveis comportamentos a serem realizados pela tabela. Entre essas modificações está a inserção de novos atributos como a definição para 'NOT NULL', 'AUTO_INCREMENT' ou a adição de um valor 'DEFAULT', caso a coluna não seja preenchida.</p>
+
+                        <div className='div-exemplos'>
+                            <p className='comentario'>-- Alteração de um Atributo da Tabela (inserção de AUTO_INCREMENT).</p>
+                            <p className='comentario'>-- O AUTO_INCREMENT signfica que o valor de id (PK) não precisa ser definido quando popularmos a tabela.</p>
+                            <p>ALTER TABLE cliente CHANGE id INT AUTO_INCREMENT;</p>
+                        </div>
+
+                        <div className='obs'>
+                            <h6>Entendendo o AUTO_INCREMENT</h6>
+                            <hr />
+                            <p>O 'AUTO_INCREMENT' é um atributo interno das tabelas que serve para identificar o valor atual da coluna.</p>
+                            <p>O valor de 'AUTO_INCREMENT' começa com 1, e é acrescido de um a cada nova inserção. Porém tanto o valor inicial quanto o valor incremental podem ser definidos pelo usuário.</p>
+                            <a href="https://www.w3schools.com/sql/sql_autoincrement.asp" target='_blank' rel='noreferrer'>Link da Discussão</a>
+                        </div>
+
+                        <h5>Modificando o Tipo de Dado de uma Coluna.</h5>
+                        <div className='div-exemplos'>
+                            <p className='comentario'>-- Alteração de um Atributo da Tabela (Modificação do Tipo de Dado).</p>
+                            <p className='comentario'>-- Neste caso, ocorre a mudança do tipo de dado de telefone, de um VARCHAR(20) para um INT.</p>
+                            <p>ALTER TABLE cliente MODIFY telefone INT;</p>
                         </div>
 
                         <br />
@@ -189,9 +334,17 @@ const Sql = () => (
                         <hr />
 
                         <div className='div-exemplos'>
+                            <p className='comentario'>-- Exclusão de uma coluna da Tabela.</p>
+                            {/* <p className='comentario'>-- Em alguns casos, a exclusão de uma coluna pode dar erro por se tratar de um campo PK ou FK.</p>
+                            <p className='comentario'>-- Nesses casos, pode-se desabilitar o <i>safe mode</i> do MySQL Workbench ou também adicionar a o atributo ON DELETE CASCADE à coluna, assim permitindo a exclusão.</p> */}
+                            <p>ALTER TABLE cliente DROP column ponto_referencia;</p>
+                        </div>
+
+                        <div className='div-exemplos'>
                             <p className='comentario'>-- Exclusão de uma tabela da base de dados</p>
                             <p className='comentario'>-- A tabela irá deixar de existir assim como os valores armazenados</p>
                             <p>DROP TABLE IF EXISTS cliente;</p>
+                            <p className='comentario'>A cláusula IF EXISTS verifica se existe uma tabela com o nome antes da exclusão.</p>
                         </div>
 
                     </details>
@@ -199,10 +352,17 @@ const Sql = () => (
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
 
-                        <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
-                            <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                        <a className='link' href="https://www.youtube.com/watch?v=XfrgCK6BX5w" target='_blank' rel='noreferrer'>
+                            <img src="http://img.youtube.com/vi/XfrgCK6BX5w/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
                             <div className='textoVideo'>
-                                <h5>Cláusula Distinct</h5>
+                                <h5>Principais comandos de DDL</h5>
+                                VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
+                            </div>
+                        </a>
+                        <a className='link' href="https://www.youtube.com/watch?v=To9qUcEMuY0" target='_blank' rel='noreferrer'>
+                            <img src="http://img.youtube.com/vi/To9qUcEMuY0/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
+                            <div className='textoVideo'>
+                                <h5>Alteração de Tabelas</h5>
                                 VIDEO PLACEHOLDER TURF VIDEO PLACEHOLDER TURF
                             </div>
                         </a>
@@ -213,6 +373,7 @@ const Sql = () => (
 
                 <details>
                     <summary>DML</summary>
+                    {/* <hr /> */}
                     <p>
                         <h4>Data Manipulation Language</h4>
                     </p>
@@ -220,6 +381,7 @@ const Sql = () => (
                     </p>
                     <details>
                         <summary>Comandos</summary>
+                        {/* <hr /> */}
                         <br />
                         <div className="div-comandos">
                             <span>INSERT</span>
@@ -232,6 +394,7 @@ const Sql = () => (
                     </details>
                     <details>
                         <summary>Exemplos</summary>
+                        {/* <hr /> */}
                         <br />
                         <div className="div-exemplos">
                             <p className="comentario">-- Adicionando um comentário</p>
@@ -244,11 +407,13 @@ const Sql = () => (
                     </details>
                     <details>
                         <summary>Triggers</summary>
+                        {/* <hr /> */}
                         <p>Triggers são funções no SQL disparados automaticamente antes ou depois de uma ação DML ser lançada (INSERT, UPDATE ou DELETE). Um trigger ,
                             ou "gatilho" está sempre relacionado a uma tabela e aos comportamentos que ocorrem sobre ela.
                         </p>
                         <details>
                             <summary>Exemplos</summary>
+                            {/* <hr /> */}
                             <br />
                             <div className="div-exemplos">
                                 <p classNameName='comentario'>-- Criação de Trigger antes do INSERT de um novo dado</p>
@@ -303,6 +468,7 @@ const Sql = () => (
                     </details>
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
+                        {/* <hr /> */}
 
                         <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
@@ -317,12 +483,14 @@ const Sql = () => (
 
                 <details>
                     <summary>DQL</summary>
+                    {/* <hr /> */}
                     <p>
                         <h4>Data Query Language</h4>
                     </p>
                     <p>Responsável pelas leituras e consultas de dados no banco. As consultas podem incluir filtros, ordenação, agrupamento e junção de dados de várias tabelas.</p>
                     <details>
                         <summary>Comandos</summary>
+                        {/* <hr /> */}
                         <br />
                         <div className="div-comandos">
                             <span>SELECT</span>
@@ -352,6 +520,7 @@ const Sql = () => (
                     </details>
                     <details>
                         <summary>Exemplos</summary>
+                        {/* <hr /> */}
                         <br />
                         <div className='obs'>
                             <p>Para alguns dos exemplos, serão utilizada a base de dados <b>sakila</b> e <b>world</b></p>
@@ -464,6 +633,7 @@ const Sql = () => (
                     </details>
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
+                        {/* <hr /> */}
 
                         <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
@@ -485,6 +655,7 @@ const Sql = () => (
 
                 <details>
                     <summary>DCL</summary>
+                    {/* <hr /> */}
                     <p>
                         <h4>Data Control Language</h4>
                     </p>
@@ -493,6 +664,7 @@ const Sql = () => (
                         temporibus animi? Nam.</p>
                     <details>
                         <summary>Comandos</summary>
+                        {/* <hr /> */}
                         <br />
                         <div className="div-comandos">
                             <span>GRANT</span>
@@ -502,6 +674,7 @@ const Sql = () => (
                     </details>
                     <details className='listaVideos'>
                         <summary>Vídeos de Apoio</summary>
+                        {/* <hr /> */}
 
                         <a className='link' href="https://www.youtube.com/watch?v=p7PeZaP6Ku8" target='_blank' rel='noreferrer'>
                             <img src="http://img.youtube.com/vi/p7PeZaP6Ku8/hqdefault.jpg" title="YouTube Video" alt="YouTube Video" />
@@ -517,6 +690,7 @@ const Sql = () => (
 
             <details>
                 <summary>Tipos de Dados</summary>
+                {/* <hr /> */}
 
                 <p>No momento de criação ou consulta de uma tabela, é importante entender quais são os tipos de dados de cada atributo e como aplicá-los corretamente</p>
 
@@ -524,9 +698,11 @@ const Sql = () => (
 
             <details>
                 <summary>Procedures</summary>
+                {/* <hr /> */}
 
                 <details>
                     <summary>Comandos</summary>
+                    {/* <hr /> */}
                     <br />
                     <div className="div-comandos">
                         <span>SELECT</span>
@@ -537,6 +713,7 @@ const Sql = () => (
 
                 <details>
                     <summary>Exemplos</summary>
+                    {/* <hr /> */}
                     <br />
                     <div className="div-exemplos">
                         <p className="comentario">-- Adicionando um comentário</p>
@@ -571,6 +748,7 @@ const Sql = () => (
 
                 <details>
                     <summary>Cursor</summary>
+                    {/* <hr /> */}
                     <br />
                     <div className="div-exemplos">
                         <p classNameName='comentario'>-- Comentário Inútil</p>
@@ -581,12 +759,15 @@ const Sql = () => (
 
             <details>
                 <summary>Administração do Banco</summary>
+                {/* <hr /> */}
 
                 <details>
                     <summary>Planos de Execução</summary>
+                    {/* <hr /> */}
                 </details>
                 <details>
                     <summary>Criação de Usuários</summary>
+                    {/* <hr /> */}
                 </details>
 
             </details>

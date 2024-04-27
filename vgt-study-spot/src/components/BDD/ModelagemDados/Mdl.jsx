@@ -4,6 +4,7 @@ const Mdl = () => (
     <div className="container">
         <details className="materia">
             <summary>Modelagem de Dados</summary>
+            {/* <hr /> */}
 
             <p>Assunto que aborda o entendimento da modelagem de bancos de dados, assim como a sua aplicação em diferentes formas de modelagem e
                 a maneira que são representadas as características do mundo real em um recorte abstraído.
@@ -11,6 +12,7 @@ const Mdl = () => (
 
             <details>
                 <summary>Principais Tópicos</summary>
+                {/* <hr /> */}
                 <p>
                     <ul>
                         <li>MER e DER</li>
@@ -43,6 +45,7 @@ const Mdl = () => (
 
             <details>
                 <summary>Exemplos</summary>
+                {/* <hr /> */}
 
                 <br />
                 <p><h5>Exemplo de Modelagem Conceitual</h5></p>
@@ -71,6 +74,7 @@ const Mdl = () => (
 
             <details>
                 <summary>Atributos</summary>
+                {/* <hr /> */}
 
                 <p>
                     Artibutos são as características que cada entidade carrega. Uma maneira de classifica-las com base em suas informações. Existem
@@ -97,6 +101,7 @@ const Mdl = () => (
 
                 <details>
                     <summary>Chaves</summary>
+                    {/* <hr /> */}
 
                     <p>
                         Chaves Primárias
@@ -119,6 +124,7 @@ const Mdl = () => (
 
             <details>
                 <summary>Relacionamentos e Cardinalidade</summary>
+                {/* <hr /> */}
 
                 <p>
                     Os Relacionamentos são associacões entre entidades, que geralmente são caracterizados por verbos
@@ -135,6 +141,7 @@ const Mdl = () => (
 
                 <details>
                     <summary>Entidades Associativas</summary>
+                    {/* <hr /> */}
                 </details>
 
             </details>
