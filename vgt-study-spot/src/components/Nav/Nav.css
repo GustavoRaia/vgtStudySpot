@@ -1,8 +1,10 @@
 .barra-nav {
     display: flex;
-    justify-content: baseline;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid gray;
-    /* background-color: white; */
+    /* background-color: #1b2a34; */
+    background-color: white;
 }
 
 .barra-nav_lista {
@@ -10,6 +12,7 @@
     display: flex;
     padding: 0;
     margin: 0;
+    margin-right: 5em;
 }
 
 .barra-nav_item {
@@ -23,11 +26,19 @@
 .barra-nav_A {
     font-size: 20px;
     text-decoration: none;
-    /* color: #282C34; */
-    color: white;
+    color: #282C34;
     font-weight: 600;
 }
 
 .barra-nav_A:hover {
-    color: gray;
+    color: #5270ff;
+}
+
+.logo {
+    margin-left: 5em;
+}
+
+.logo_img {
+    border: none;
+    width: 300px;
 }
